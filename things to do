@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+public class Main{
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        ArrayList<String> array = new ArrayList<>();
+
+        String choice="yes";
+        while(choice.equalsIgnoreCase("yes")){
+            System.out.println("enter the number of things you want to do");
+            int a=sc.nextInt();
+            int b=a+1;
+            System.out.println("enter your thing to do");
+            for(int i=0;i<b;i++){
+                String abb=sc.nextLine();
+                array.add(abb);
+            }
+            System.out.println("Here the thing you want to do");
+            System.out.println("..............................");
+            for(String str:array){
+                System.out.println(str);
+            }
+            System.out.println("do you want to add more things to do(yes/no)");
+            choice=sc.next();
+
+        }
+        //sc.close();
+        System.out.println("final list of things to do");
+        for(String str:array){
+            System.out.println(str);
+        }
+        //System.out.println(str);
+    }
+
+}
